@@ -35,7 +35,7 @@ lint_yaml: $(YAML_FILES) ## Lint yaml files
 	$(YAMLLINT_DOCKER) -f parsable -c $(YAMLLINT_CONFIG) $(YAMLLINT_ARGS) -- $?
 
 .PHONY: lint_adoc
-lint_adoc:
+lint_adoc: ## Lint documentation
 	$(VALE_CMD) $(VALE_ARGS)
 
 .PHONY: format
@@ -49,13 +49,13 @@ format_jsonnet: $(JSONNET_FILES) ## Format jsonnet files
 docs-serve: ## Preview the documentation
 	$(ANTORA_PREVIEW_CMD)
 
-.PHONY: docs-vale
-docs-vale: ## Lint the documentation
-	$(VALE_CMD) $(VALE_ARGS)
-
 .PHONY: compile
 .compile:
 	$(COMMODORE_CMD)
+
+.PHONY: test
+test: commodore_args = -f tests/$(instance).yml
+test: .compile ## Compile the component
 
 .PHONY: clean
 clean: ## Clean the project
