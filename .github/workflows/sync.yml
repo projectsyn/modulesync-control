@@ -1,0 +1,32 @@
+name: Sync
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure Git
+        run: |
+          git config --global user.name "$GITHUB_ACTOR"
+          git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Install Ruby 3.0
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Install modulesync
+        run: bundle install
+      - name: Run modulesync
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        run: |
+          sha="$(git rev-parse --short HEAD)"
+          bundle exec msync update --pr --pr-title "[ModuleSync] Update from ${{ github.repository }}@${sha}" --remote-branch "modulesync-${sha}"
