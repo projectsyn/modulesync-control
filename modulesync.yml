@@ -1,0 +1,6 @@
+namespace: projectsyn
+branch: master
+message: Update from projectsyn/modulesync-control
+pr_target_branch: master
+pr_labels:
+  - modulesync

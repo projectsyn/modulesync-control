@@ -1,0 +1,4 @@
+= modulesync-control
+
+ModuleSync configuration and template repository for Commodore components.
+This repository will manage the CI/CD scaffolding for several Commodore components.
