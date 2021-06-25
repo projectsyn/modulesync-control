@@ -31,6 +31,3 @@ LICENSE:
 Makefile:
   # Add additional Makefiles
   includes: []
-
-Doxyfile:
-  delete: true
