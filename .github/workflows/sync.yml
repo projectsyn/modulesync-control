@@ -26,7 +26,7 @@ jobs:
         run: bundle install
       - name: Run modulesync
         env:
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MODULESYNC_TOKEN }}
         run: |
           sha="$(git rev-parse --short HEAD)"
           bundle exec msync update --pr --pr-title "[ModuleSync] Update from ${{ github.repository }}@${sha}" --remote-branch "modulesync-${sha}"
