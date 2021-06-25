@@ -1,0 +1,33 @@
+:global:
+  feature_componentCompile: true
+  feature_goUnitTests: false
+  componentName: ""
+
+.github/ISSUE_TEMPLATE/config.yml:
+  contact_links:
+    - name: ❓ Help and Support RocketChat Channel
+      url: https://community.appuio.ch
+      about: Please ask and answer questions here. 🏥
+
+.github/workflows/test.yaml:
+  makeTarget: test
+  matrix: {}
+  # key: provider
+  # entries:
+  #   - variant1
+  #   - variant2
+
+LICENSE:
+  year: 2021
+  holder: VSHN AG <info@vshn.ch>
+
+.gitignore:
+  # Add additional lines to the `.gitignore` file
+  additionalEntries: []
+
+Makefile:
+  # Add additional Makefiles
+  includes: []
+
+Doxyfile:
+  delete: true
