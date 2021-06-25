@@ -13,7 +13,7 @@ SHELL := bash
 
 include Makefile.vars.mk
 <% @configs['includes'].each do |entry| -%>
-<%= entry %>
+include <%= entry %>
 <% end -%>
 
 .PHONY: help
