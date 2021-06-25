@@ -1,0 +1,64 @@
+name: Pull Request
+on:
+  pull_request:
+    branches:
+      - master
+
+env:
+  COMPONENT_NAME: <%= @configs['componentName'] %>
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        command:
+          - lint_jsonnet
+          - lint_yaml
+          - docs-vale
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run ${{ matrix.command }}
+        run: make ${{ matrix.command }}
+  editorconfig:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: snow-actions/eclint@v1.0.1
+        with:
+          args: 'check'
+
+<% if @configs['feature_componentCompile'] -%>
+  test:
+    runs-on: ubuntu-latest
+  <%- if !@configs['matrix'].empty? -%>
+    strategy:
+      matrix:
+        <%= @configs['matrix']['key'] -%>:
+<% @configs['matrix']['entries'].each do |entry| -%>
+          - <%= entry %>
+<% end -%>
+  <%- end -%>
+    defaults:
+      run:
+        working-directory: ${{ env.COMPONENT_NAME }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ${{ env.COMPONENT_NAME }}
+  <%- if @configs['feature_goUnitTests'] -%>
+      - name: Determine Go version from go.mod
+        run: echo "GO_VERSION=$(grep "go 1." tests/go.mod | cut -d " " -f 2)" >> $GITHUB_ENV
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.GO_VERSION }}
+      - uses: actions/cache@v2
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+  <%- end -%>
+      - name: Compile component
+        run: make <%= @configs['makeTarget'] %>
+<% end -%>

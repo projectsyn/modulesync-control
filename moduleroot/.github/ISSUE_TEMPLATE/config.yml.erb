@@ -1,0 +1,7 @@
+blank_issues_enabled: false
+contact_links:
+<% @configs['contact_links'].each do |link| -%>
+  - name: <%= link['name'] %>
+    url: <%= link['url'] %>
+    about: <%= link['about'] %>
+<% end -%>
