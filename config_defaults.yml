@@ -1,6 +1,7 @@
 :global:
   feature_componentCompile: true
   feature_goUnitTests: false
+  githubUrl: ""
   componentName: ""
 
 .github/ISSUE_TEMPLATE/config.yml:
