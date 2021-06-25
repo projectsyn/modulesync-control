@@ -17,6 +17,9 @@
   #   - variant1
   #   - variant2
 
+docs/antora.yml:
+  version: master
+
 LICENSE:
   year: 2021
   holder: VSHN AG <info@vshn.ch>
