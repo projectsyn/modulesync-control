@@ -1,6 +1,12 @@
 name: Sync
 
 on:
+  workflow_dispatch:
+    inputs:
+      filter:
+        description: 'Filter sync for a specific repository (exact name or regex)'
+        required: false
+        default: ''
   push:
     branches:
       - master
@@ -29,4 +35,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MODULESYNC_TOKEN }}
         run: |
           sha="$(git rev-parse --short HEAD)"
-          bundle exec msync update --pr --pr-title "[ModuleSync] Update from ${{ github.repository }}@${sha}" --remote-branch "modulesync-${sha}"
+          msync_args="--filter=${{ github.event.inputs.filter }}"
+          bundle exec msync update --pr --pr-title "[ModuleSync] Update from ${{ github.repository }}@${sha}" --remote-branch "modulesync-${sha}" ${msync_args}

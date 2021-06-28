@@ -2,3 +2,8 @@
 
 ModuleSync configuration and template repository for Commodore components.
 This repository will manage the CI/CD scaffolding for several Commodore components.
+
+== Triggering a sync
+
+- Via commit to master
+- Via Workflow Dispatch (https://github.com/projectsyn/modulesync-control/actions/workflows/sync.yml)
