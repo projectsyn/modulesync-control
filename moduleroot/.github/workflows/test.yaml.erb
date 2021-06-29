@@ -27,8 +27,7 @@ jobs:
       - uses: snow-actions/eclint@v1.0.1
         with:
           args: 'check'
-
-<% if @configs['feature_componentCompile'] -%>
+<%- if @configs['feature_componentCompile'] -%>
   test:
     runs-on: ubuntu-latest
   <%- if !@configs['matrix'].empty? -%>
@@ -61,4 +60,4 @@ jobs:
   <%- end -%>
       - name: Compile component
         run: make <%= @configs['makeTarget'] %>
-<% end -%>
+<%- end -%>
