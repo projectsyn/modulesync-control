@@ -1,7 +1,6 @@
 :global:
   feature_componentCompile: true
   feature_goUnitTests: false
-  githubUrl: ""
   componentName: ""
 
 .github/ISSUE_TEMPLATE/config.yml:
@@ -32,3 +31,6 @@ LICENSE:
 Makefile:
   # Add additional Makefiles
   includes: []
+
+CHANGELOG.md:
+  delete: true
