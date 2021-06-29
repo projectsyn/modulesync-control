@@ -31,3 +31,6 @@ LICENSE:
 Makefile:
   # Add additional Makefiles
   includes: []
+
+CHANGELOG.md:
+  delete: true
