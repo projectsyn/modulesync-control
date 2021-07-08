@@ -1,3 +1,4 @@
+- component-argocd
 - component-cert-manager
 - component-keycloak
 - appuio/component-openshift4-monitoring
