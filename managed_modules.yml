@@ -1,5 +1,6 @@
 - component-argocd
 - component-cert-manager
+- component-cluster-autoscaler
 - component-keycloak
 - component-steward
 - appuio/component-openshift4-logging
