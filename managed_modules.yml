@@ -1,4 +1,5 @@
 - component-argocd
+- component-backup-k8up
 - component-cert-manager
 - component-cluster-autoscaler
 - component-keycloak
