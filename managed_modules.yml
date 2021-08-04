@@ -1,4 +1,5 @@
 - component-argocd
+- component-azuredisk-csi-driver
 - component-backup-k8up
 - component-cert-manager
 - component-cluster-autoscaler
