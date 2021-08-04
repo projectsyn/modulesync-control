@@ -2,6 +2,7 @@
 - component-backup-k8up
 - component-cert-manager
 - component-cluster-autoscaler
+- component-external-dns
 - component-ingress-nginx
 - component-keycloak
 - component-steward
