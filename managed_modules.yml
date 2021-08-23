@@ -8,5 +8,6 @@
 - component-keycloak
 - component-kyverno
 - component-steward
+- component-system-upgrade-controller
 - appuio/component-openshift4-logging
 - appuio/component-openshift4-monitoring
