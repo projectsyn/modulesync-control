@@ -6,6 +6,7 @@
 - component-external-dns
 - component-ingress-nginx
 - component-keycloak
+- component-kyverno
 - component-steward
 - appuio/component-openshift4-logging
 - appuio/component-openshift4-monitoring
