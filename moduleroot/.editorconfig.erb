@@ -7,6 +7,11 @@
 ; More information at https://editorconfig.org
 
 root = true
+<%- if @configs['feature_goldenTests'] -%>
+    <%- # Workaround since we can not conditionally create files -%>
+    <%- FileUtils.mkdir_p "tests/golden" -%>
+    <%- File.write "tests/golden/.editorconfig", "root=true" -%>
+<%- end -%>
 
 [*]
 charset = utf-8

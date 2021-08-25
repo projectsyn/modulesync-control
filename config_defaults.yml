@@ -1,6 +1,7 @@
 :global:
   feature_componentCompile: true
   feature_goUnitTests: false
+  feature_goldenTests: false
   componentName: ""
 
 .github/ISSUE_TEMPLATE/config.yml:
