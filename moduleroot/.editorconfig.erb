@@ -7,11 +7,6 @@
 ; More information at https://editorconfig.org
 
 root = true
-<%- if @configs['feature_goldenTests'] -%>
-    <%- # Workaround since we can not conditionally create files -%>
-    <%- FileUtils.mkdir_p "tests/golden" -%>
-    <%- File.write "tests/golden/.editorconfig", "root=true" -%>
-<%- end -%>
 
 [*]
 charset = utf-8
@@ -34,3 +29,12 @@ insert_final_newline = false
 
 [Makefile]
 indent_style = tab
+
+<%- if @configs['feature_goldenTests'] -%>
+; Ignore generated files
+[tests/golden/**]
+indent_style = unset
+indent_size = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+<%- end -%>
