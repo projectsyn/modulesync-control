@@ -16,3 +16,6 @@ ignore: |
   manifests/
   vendor/
   compiled/
+<%- if @configs['feature_goldenTests'] -%>
+  tests/golden/
+<%- end -%>
