@@ -7,6 +7,7 @@
 - component-ingress-nginx
 - component-keycloak
 - component-kyverno
+- component-maxscale
 - component-steward
 - component-system-upgrade-controller
 - appuio/component-appuio-cloud
