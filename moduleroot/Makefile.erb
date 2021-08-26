@@ -62,8 +62,8 @@ test: .compile ## Compile the component
 	@echo
 	@cd tests && go test -count 1 ./...
 <%- end -%>
-
 <%- if @configs['feature_goldenTests'] -%>
+
 .PHONY: golden-diff-help
 golden-diff-help:
 	@echo "NOTE: if the 'golden-diff' target fails, review output and run:"
