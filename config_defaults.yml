@@ -2,6 +2,7 @@
   feature_componentCompile: true
   feature_goUnitTests: false
   feature_goldenTests: false
+  feature_kubevalValidate: false
   componentName: ""
 
 .github/ISSUE_TEMPLATE/config.yml:

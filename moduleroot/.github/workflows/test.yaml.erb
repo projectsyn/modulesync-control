@@ -82,3 +82,24 @@ jobs:
       - name: Golden diff
         run: make golden-diff
 <%- end -%>
+<%- if @configs['feature_kubevalValidate'] -%>
+  validate:
+    runs-on: ubuntu-latest
+  <%- if !@configs['matrix'].empty? -%>
+    strategy:
+      matrix:
+        <%= @configs['matrix']['key'] -%>:
+<% @configs['matrix']['entries'].each do |entry| -%>
+          - <%= entry %>
+<% end -%>
+  <%- end -%>
+    defaults:
+      run:
+        working-directory: ${{ env.COMPONENT_NAME }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ${{ env.COMPONENT_NAME }}
+      - name: Validate Kubernetes objects
+        run: make validate
+<%- end -%>
