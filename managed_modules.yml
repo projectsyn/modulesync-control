@@ -10,6 +10,7 @@
 - component-kyverno
 - component-lieutenant
 - component-maxscale
+- component-prometheus-pushgateway
 - component-steward
 - component-system-upgrade-controller
 - appuio/component-appuio-cloud
