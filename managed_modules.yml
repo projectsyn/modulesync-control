@@ -11,6 +11,7 @@
 - component-kyverno
 - component-lieutenant
 - component-maxscale
+- component-networkpolicy
 - component-prometheus-pushgateway
 - component-steward
 - component-system-upgrade-controller
