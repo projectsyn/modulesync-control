@@ -16,6 +16,7 @@
 - component-steward
 - component-system-upgrade-controller
 - appuio/component-appuio-cloud
+- appuio/component-group-sync-operator
 - appuio/component-keycloak-attribute-sync-controller
 - appuio/component-openshift4-api
 - appuio/component-openshift4-authentication
