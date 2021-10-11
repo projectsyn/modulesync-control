@@ -80,5 +80,5 @@ jobs:
         with:
           path: ${{ env.COMPONENT_NAME }}
       - name: Golden diff
-        run: make golden-diff
+        run: make <%= @configs['goldenTest_makeTarget'] %>
 <%- end -%>

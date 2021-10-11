@@ -12,6 +12,7 @@
 
 .github/workflows/test.yaml:
   makeTarget: test
+  goldenTest_makeTarget: golden-diff # Requires `feature_goldenTests`
   matrix: {}
   # key: provider
   # entries:
