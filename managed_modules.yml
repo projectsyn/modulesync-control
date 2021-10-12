@@ -13,6 +13,7 @@
 - component-maxscale
 - component-networkpolicy
 - component-prometheus-pushgateway
+- component-resource-locker
 - component-steward
 - component-system-upgrade-controller
 - appuio/component-appuio-cloud
