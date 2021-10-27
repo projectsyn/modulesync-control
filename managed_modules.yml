@@ -17,6 +17,7 @@
 - component-resource-locker
 - component-steward
 - component-system-upgrade-controller
+- component-helm-chart
 - appuio/component-appuio-cloud
 - appuio/component-group-sync-operator
 - appuio/component-keycloak-attribute-sync-controller
