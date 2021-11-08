@@ -26,3 +26,4 @@
 - appuio/component-openshift4-ingress
 - appuio/component-openshift4-logging
 - appuio/component-openshift4-monitoring
+- appuio/component-openshift4-registry
