@@ -14,6 +14,7 @@
 - component-maxscale
 - component-networkpolicy
 - component-prometheus-pushgateway
+- component-rancher-monitoring
 - component-resource-locker
 - component-steward
 - component-system-upgrade-controller
