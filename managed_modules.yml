@@ -4,6 +4,7 @@
 - component-azuredisk-csi-driver
 - component-backup-k8up
 - component-cert-manager
+- component-cilium
 - component-cluster-autoscaler
 - component-cluster-backup
 - component-external-dns
