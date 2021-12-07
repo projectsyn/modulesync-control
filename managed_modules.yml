@@ -21,6 +21,7 @@
 - component-system-upgrade-controller
 - component-thanos
 - appuio/component-appuio-cloud
+- appuio/component-control-api
 - appuio/component-group-sync-operator
 - appuio/component-keycloak-attribute-sync-controller
 - appuio/component-openshift4-api
