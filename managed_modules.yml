@@ -20,6 +20,7 @@
 - component-steward
 - component-system-upgrade-controller
 - component-thanos
+- component-vcluster
 - appuio/component-appuio-cloud
 - appuio/component-control-api
 - appuio/component-group-sync-operator
