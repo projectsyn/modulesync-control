@@ -32,3 +32,4 @@
 - appuio/component-openshift4-logging
 - appuio/component-openshift4-monitoring
 - appuio/component-openshift4-registry
+- appuio/component-openshift4-nodes
