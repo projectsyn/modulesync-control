@@ -7,6 +7,7 @@
 - component-cilium
 - component-cluster-autoscaler
 - component-cluster-backup
+- component-coredns
 - component-external-dns
 - component-ingress-nginx
 - component-keycloak
