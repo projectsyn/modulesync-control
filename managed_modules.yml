@@ -8,6 +8,7 @@
 - component-cluster-autoscaler
 - component-cluster-backup
 - component-coredns
+- component-eventrouter
 - component-external-dns
 - component-ingress-nginx
 - component-keycloak
