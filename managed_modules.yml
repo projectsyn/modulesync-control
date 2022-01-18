@@ -18,6 +18,7 @@
 - component-maxscale
 - component-metrics-server
 - component-networkpolicy
+- component-podsecuritypolicy
 - component-prometheus-pushgateway
 - component-rancher-monitoring
 - component-resource-locker
