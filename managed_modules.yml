@@ -16,6 +16,7 @@
 - component-kyverno
 - component-lieutenant
 - component-maxscale
+- component-metrics-server
 - component-networkpolicy
 - component-prometheus-pushgateway
 - component-rancher-monitoring
