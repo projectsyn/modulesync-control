@@ -22,6 +22,7 @@
 - component-prometheus-pushgateway
 - component-rancher-monitoring
 - component-resource-locker
+- component-secret-generator
 - component-steward
 - component-system-upgrade-controller
 - component-thanos
