@@ -24,6 +24,7 @@
 - component-resource-locker
 - component-secret-generator
 - component-steward
+- component-storageclass
 - component-system-upgrade-controller
 - component-thanos
 - component-vcluster
