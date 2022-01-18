@@ -37,3 +37,4 @@
 - appuio/component-openshift4-monitoring
 - appuio/component-openshift4-nodes
 - appuio/component-openshift4-registry
+- appuio/component-openshift4-scheduling
