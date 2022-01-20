@@ -28,6 +28,7 @@
 - component-storageclass
 - component-system-upgrade-controller
 - component-thanos
+- component-vault
 - component-vcluster
 - appuio/component-appuio-cloud
 - appuio/component-control-api
