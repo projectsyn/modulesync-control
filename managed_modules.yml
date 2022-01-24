@@ -8,6 +8,7 @@
 - component-cluster-autoscaler
 - component-cluster-backup
 - component-coredns
+- component-csi-cloudscale
 - component-eventrouter
 - component-external-dns
 - component-grafana-helm
