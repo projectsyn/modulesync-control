@@ -32,6 +32,7 @@
 - component-vault
 - component-vcluster
 - appuio/component-appuio-cloud
+- appuio/component-cloud-portal
 - appuio/component-control-api
 - appuio/component-group-sync-operator
 - appuio/component-keycloak-attribute-sync-controller
