@@ -1,3 +1,6 @@
+<%-
+@matrix = @configs.key?('matrix') ? @configs['matrix'] : @configs['testMatrix']
+-%>
 name: Pull Request
 on:
   pull_request:
@@ -30,11 +33,11 @@ jobs:
 <%- if @configs['feature_componentCompile'] -%>
   test:
     runs-on: ubuntu-latest
-  <%- if !@configs['matrix'].empty? -%>
+  <%- if !@matrix.empty? -%>
     strategy:
       matrix:
-        <%= @configs['matrix']['key'] -%>:
-<% @configs['matrix']['entries'].each do |entry| -%>
+        <%= @matrix['key'] -%>:
+<% @matrix['entries'].each do |entry| -%>
           - <%= entry %>
 <% end -%>
   <%- end -%>
@@ -64,11 +67,11 @@ jobs:
 <%- if @configs['feature_goldenTests'] -%>
   golden:
     runs-on: ubuntu-latest
-  <%- if !@configs['matrix'].empty? -%>
+  <%- if !@matrix.empty? -%>
     strategy:
       matrix:
-        <%= @configs['matrix']['key'] -%>:
-<% @configs['matrix']['entries'].each do |entry| -%>
+        <%= @matrix['key'] -%>:
+<% @matrix['entries'].each do |entry| -%>
           - <%= entry %>
 <% end -%>
   <%- end -%>
