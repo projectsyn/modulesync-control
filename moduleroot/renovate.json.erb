@@ -4,6 +4,20 @@
     ":gitSignOff",
     ":disableDependencyDashboard"
   ],
+<%- if @configs['feature_goldenTests'] -%>
+  "postUpgradeTasks": {
+    "commands": [
+      <%- if !@configs['testMatrix'].empty? && !@configs['testMatrix']['entries'].empty? -%>
+      "make gen-golden-all"
+      <%- else -%>
+      "make gen-golden"
+      <%- end -%>
+    ],
+    "fileFilters": [ "tests/golden/**" ],
+    "executionMode": "update"
+  },
+  "suppressNotifications": [ "artifactErrors" ],
+<%- end -%>
   "labels": [
     "dependency"
   ]
