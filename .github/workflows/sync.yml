@@ -33,6 +33,7 @@ jobs:
       - name: Run modulesync
         env:
           GITHUB_TOKEN: ${{ secrets.MODULESYNC_TOKEN }}
+          GITHUB_BASE_URL: "https://api.github.com"
         run: |
           sha="$(git rev-parse --short HEAD)"
           msync_args="--filter=${{ github.event.inputs.filter }}"
