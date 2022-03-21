@@ -34,3 +34,6 @@ COMMODORE_CMD  ?= $(DOCKER_CMD) $(DOCKER_ARGS) $(root_volume) docker.io/projects
 JB_CMD         ?= $(DOCKER_CMD) $(DOCKER_ARGS) --entrypoint /usr/local/bin/jb docker.io/projectsyn/commodore:latest install
 
 instance ?= defaults
+<%- if @configs['feature_goldenTests'] && !@configs['testMatrix'].empty? && !@configs['testMatrix']['entries'].empty? -%>
+test_instances =<%- @configs['testMatrix']['entries'].each do |entry| %> tests/<%= entry %>.yml<% end %>
+<%- end -%>
