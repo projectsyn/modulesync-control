@@ -9,6 +9,7 @@
 - component-cluster-backup
 - component-coredns
 - component-csi-cloudscale
+- component-csi-driver-smb
 - component-eventrouter
 - component-external-dns
 - component-grafana-helm
