@@ -18,7 +18,6 @@
 .github/workflows/test.yaml:
   makeTarget: test
   goldenTest_makeTarget: golden-diff # Requires `feature_goldenTests`
-  #matrix: {} # deprecated, use global param `testMatrix`
 
 docs/antora.yml:
   version: master
