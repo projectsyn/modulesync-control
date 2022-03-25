@@ -20,6 +20,7 @@
 - component-maxscale
 - component-metallb
 - component-metrics-server
+- component-minio
 - component-networkpolicy
 - component-nfs-subdir-external-provisioner
 - component-podsecuritypolicy
