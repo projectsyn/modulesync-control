@@ -21,6 +21,7 @@
 - component-metallb
 - component-metrics-server
 - component-networkpolicy
+- component-nfs-subdir-external-provisioner
 - component-podsecuritypolicy
 - component-prometheus-pushgateway
 - component-rancher-monitoring
