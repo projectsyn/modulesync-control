@@ -11,6 +11,7 @@
 - component-csi-driver-smb
 - component-eventrouter
 - component-external-dns
+- component-fluentbit
 - component-grafana-helm
 - component-ingress-nginx
 - component-keycloak
