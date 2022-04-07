@@ -8,13 +8,21 @@ MAKEFLAGS += --warn-undefined-variables
 
 msync_args ?=
 
+ifneq "$(shell which docker 2>/dev/null)" ""
+	DOCKER_CMD  ?= $(shell which docker)
+	DOCKER_ARGS ?=
+else
+	DOCKER_CMD  ?= podman
+	DOCKER_ARGS ?= --userns=keep-id
+endif
+
 .PHONY: help
 help: ## Show this help
 	@grep -E -h '\s##\s' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = "(: ).*?## "}; {gsub(/\\:/,":",$$1)}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: sync\:noop
 sync\:noop: ## Syncs the managed modules locally but doesn't create PRs. Requires running SSH agent with access to github.com, ~/.ssh/known_hosts, ~/.gitconfig.
-	@docker run --rm -it -u $$(id -u) \
+	$(DOCKER_CMD) run --rm -it -u $$(id -u):$$(id -g) $(DOCKER_ARGS) \
 		--env SSH_AUTH_SOCK=/tmp/ssh_agent.sock \
 		--volume "${SSH_AUTH_SOCK}:/tmp/ssh_agent.sock" \
 		--volume "${HOME}/.ssh/known_hosts:/home/msync/.ssh/known_hosts:ro" \
