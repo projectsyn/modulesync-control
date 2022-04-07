@@ -3,6 +3,10 @@
 ModuleSync configuration and template repository for Commodore components.
 This repository will manage the CI/CD scaffolding for several Commodore components.
 
+== Onboarding a component
+
+See https://syn.tools/syn/how-tos/prepare_for_modulesync.html
+
 == Triggering a sync
 
 - Via commit to master
