@@ -1,3 +1,4 @@
+---
 :global:
   feature_componentCompile: true
   feature_goUnitTests: false
@@ -17,7 +18,7 @@
 
 .github/workflows/test.yaml:
   makeTarget: test
-  goldenTest_makeTarget: golden-diff # Requires `feature_goldenTests`
+  goldenTest_makeTarget: golden-diff  # Requires `feature_goldenTests`
 
 docs/antora.yml:
   version: master
