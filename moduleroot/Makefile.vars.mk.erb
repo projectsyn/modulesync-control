@@ -21,7 +21,7 @@ else
 endif
 DOCKER_ARGS ?= run --rm -u "$$(id -u):$$(id -g)" --userns=$(DOCKER_USERNS) -w /$(COMPONENT_NAME) -e HOME="/$(COMPONENT_NAME)"
 
-JSONNET_FILES   ?= $(shell find . -type f -not -path './vendor/*' \( -name '*.*jsonnet' -or -name '*.libsonnet' \))
+JSONNET_FILES   ?= $(shell find . -type f -not -path './vendor/*' \( -name '*.*jsonnet' -or -name '*.libsonnet' -or -name '*.libjsonnet' \))
 JSONNETFMT_ARGS ?= --in-place --pad-arrays
 JSONNET_IMAGE   ?= docker.io/bitnami/jsonnet:latest
 JSONNET_DOCKER  ?= $(DOCKER_CMD) $(DOCKER_ARGS) $(root_volume) --entrypoint=jsonnetfmt $(JSONNET_IMAGE)
