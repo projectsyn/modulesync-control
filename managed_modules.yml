@@ -26,6 +26,7 @@
 - component-prometheus-pushgateway
 - component-rancher-monitoring
 - component-resource-locker
+- component-rook-ceph
 - component-secret-generator
 - component-steward
 - component-storageclass
