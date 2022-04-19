@@ -1,3 +1,4 @@
+---
 - component-acme-dns
 - component-adhoc-configurations
 - component-argocd
