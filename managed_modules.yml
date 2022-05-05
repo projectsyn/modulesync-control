@@ -9,6 +9,7 @@
 - component-coredns
 - component-csi-cloudscale
 - component-csi-driver-smb
+- component-crossplane
 - component-eventrouter
 - component-fluentbit
 - component-grafana-helm
