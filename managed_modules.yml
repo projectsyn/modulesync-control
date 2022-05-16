@@ -1,5 +1,6 @@
 - component-acme-dns
 - component-adhoc-configurations
+- component-appcat-service-postgresql
 - component-argocd
 - component-backup-k8up
 - component-cert-manager
