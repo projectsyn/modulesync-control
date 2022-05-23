@@ -25,6 +25,7 @@
 - component-networkpolicy
 - component-nfs-subdir-external-provisioner
 - component-podsecuritypolicy
+- component-prometheus
 - component-prometheus-pushgateway
 - component-rancher-monitoring
 - component-resource-locker
@@ -32,7 +33,6 @@
 - component-secret-generator
 - component-steward
 - component-storageclass
-- component-syn-kube-prometheus
 - component-system-upgrade-controller
 - component-thanos
 - component-vault
