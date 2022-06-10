@@ -8,7 +8,7 @@ on:
       - master
 
 env:
-  COMPONENT_NAME: <%= @configs['componentName'] %>
+  COMPONENT_NAME: <%= @metadata[:module_name].delete_prefix('component-') %>
 
 jobs:
   linting:
