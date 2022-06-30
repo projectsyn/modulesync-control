@@ -13,6 +13,7 @@
 - component-csi-cloudscale
 - component-csi-driver-smb
 - component-eventrouter
+- component-espejo
 - component-fluentbit
 - component-grafana-helm
 - component-ingress-nginx
