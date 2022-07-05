@@ -45,6 +45,7 @@
 - appuio/component-control-api
 - appuio/component-group-sync-operator
 - appuio/component-keycloak-attribute-sync-controller
+- appuio/component-openshift-prometheus-proxy
 - appuio/component-openshift4-api
 - appuio/component-openshift4-authentication
 - appuio/component-openshift4-console
@@ -52,7 +53,7 @@
 - appuio/component-openshift4-logging
 - appuio/component-openshift4-monitoring
 - appuio/component-openshift4-nodes
+- appuio/component-openshift4-operators
 - appuio/component-openshift4-registry
 - appuio/component-openshift4-scheduling
 - appuio/component-openshift4-version
-- appuio/component-openshift-prometheus-proxy
