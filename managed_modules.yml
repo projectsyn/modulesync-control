@@ -58,4 +58,5 @@
 - appuio/component-openshift4-operators
 - appuio/component-openshift4-registry
 - appuio/component-openshift4-scheduling
+- appuio/component-openshift4-slos
 - appuio/component-openshift4-version
