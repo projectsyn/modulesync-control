@@ -1,0 +1,42 @@
+<%-
+@cname = @metadata[:module_name].delete_prefix('component-')
+@matrix = @configs['testMatrix']
+if !@matrix.empty? then
+  @add_matrix = "y"
+  @test_cases = @matrix['entries'].join(" ")
+else
+  @add_matrix = "n"
+  @test_cases = "defaults"
+end
+if @configs['feature_goldenTests'] then
+  @add_golden = "y"
+else
+  @add_golden = "n"
+end
+if @configs['feature_goUnitTests'] then
+  @add_go_unit = "y"
+else
+  @add_go_unit = "n"
+end
+-%>
+{
+  "template": "https://github.com/projectsyn/commodore-component-template.git",
+  "commit": "e6c4fd69190db1ad12e941d578b9423d0e2f993c",
+  "checkout": "main",
+  "context": {
+    "cookiecutter": {
+      "name": "<%= @configs['componentName'] %>",
+      "slug": "<%= @cname %>",
+      "parameter_key": "<%= @cname.gsub('-', '_') %>",
+      "test_cases": "<%= @test_cases %>",
+      "add_golden": "<%= @add_golden %>",
+      "add_matrix": "<%= @add_matrix %>",
+      "add_go_unit": "<%= @add_go_unit %>",
+      "github_owner": "<%= @configs[:namespace] %>",
+      "github_name": "<%= @metadata[:module_name] %>",
+      "github_url": "https://github.com/<%= @configs[:namespace] %>/<%= @metadata[:module_name] %>",
+      "_template": "https://github.com/projectsyn/commodore-component-template.git"
+    }
+  },
+  "directory": null
+}
