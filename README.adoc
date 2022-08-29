@@ -1,3 +1,7 @@
+= :warning: Archival notice :warning:
+
+Component templates are now managed from the Cookiecutter repository at https://github.com/projectsyn/commodore-component-template[projectsyn/commodore-component-template].
+
 = modulesync-control
 
 ModuleSync configuration and template repository for Commodore components.
